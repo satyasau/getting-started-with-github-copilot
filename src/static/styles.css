@@ -91,9 +91,19 @@ section h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  padding-left: 0;
+  margin: 0;
 }
 
 .participants-list li {
+  list-style: none;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   background: linear-gradient(135deg, #e8f0fe, #dfe9ff);
   color: #1d4ed8;
   border: 1px solid #bfdbfe;
@@ -106,7 +116,32 @@ section h3 {
 .participants-list li.empty {
   background: #f3f4f6;
   color: #6b7280;
-  border-color: #d1d5db;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.delete-participant-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.12);
+  color: #b91c1c;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.delete-participant-btn:hover {
+  background: rgba(220, 38, 38, 0.2);
+  transform: scale(1.05);
 }
 
 .form-group {
